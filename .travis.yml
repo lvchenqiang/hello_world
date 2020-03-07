@@ -4,8 +4,11 @@ env:
   - SHARD=test
 
 install:
+  - git clone https://github.com/flutter/flutter.git -b stable
+  - ./flutter/bin/flutter doctor
   - chmod 755 ./dev/bots/travis_install.sh
 script:
+  - ./flutter/bin/flutter test --coverage
   - chmod 755 ./dev/bots/travis_script.sh
 after_success:
   - coveralls-lcov coverage/lcov.info
