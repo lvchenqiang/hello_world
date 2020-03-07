@@ -1,5 +1,5 @@
-  
-#!/bin/bash
+ #!/bin/bash
+chmod +x travis_script.sh
 set -ex
 
 export PATH=~/development/flutter/bin:$PATH
