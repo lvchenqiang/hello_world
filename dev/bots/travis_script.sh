@@ -12,8 +12,8 @@ if [[ "$SHARD" == "dartfmt" ]]; then
 else
   # tests shard
   cd $ROOT
+  flutter test --coverage test/* || exit $?
+  flutter build iOS
 
-#   flutter test --coverage test/* || exit $?
- flutter build iOS
 
 fi
